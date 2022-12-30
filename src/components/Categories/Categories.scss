@@ -1,0 +1,55 @@
+.categories {
+  display: flex;
+  height: 80vh;
+  gap: 10px;
+  margin: 10px;
+
+  .col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .col-l {
+    flex: 2;
+  }
+
+  .row {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+    position: relative;
+
+    button {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      min-width: 80px;
+      width: fit-content;
+      height: 40px;
+      padding: 10px;
+      background-color: white;
+      cursor: pointer;
+      text-transform: uppercase;
+      border: none;
+      font-weight: 500;
+      transition: all 0.1s ease-in;
+
+      &:hover {
+        background-color: rgb(31, 31, 31);
+        color: white;
+      }
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

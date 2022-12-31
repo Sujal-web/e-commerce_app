@@ -32,5 +32,93 @@
 
   .right {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .price {
+      font-size: 30px;
+      font-weight: 500;
+      color: #2879fe;
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 300;
+      text-align: justify;
+    }
+
+    .quantity {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      button {
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border: none;
+      }
+    }
+
+    .add {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      background-color: #2879fe;
+      color: white;
+      // height: 50px;
+      width: 250px;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      .item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #2879fe;
+        font-size: 12px;
+        cursor: pointer;
+      }
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      color: gray;
+      font-size: 12px;
+      margin-top: 30px;
+    }
+
+    .details {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      gap: 10px;
+      color: gray;
+      font-size: 12px;
+
+      hr {
+        width: 200px;
+        color: 1px solid rgb(231, 231, 231);
+      }
+    }
+
+    hr {
+      color: 1px solid rgb(231, 231, 231);
+    }
   }
 }

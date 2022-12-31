@@ -1,8 +1,12 @@
 import { useState } from "react";
 import "./Product.scss";
+import { AddShoppingCart } from "@mui/icons-material";
+import { FavoriteBorder } from "@mui/icons-material";
+import { Balance } from "@mui/icons-material";
 
 export const Product = () => {
   const [selectedImg, setSelectedImg] = useState(0);
+  const [quantity, setQuantity] = useState(1);
 
   const images = [
     "https://images.pexels.com/photos/1261422/pexels-photo-1261422.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -29,7 +33,50 @@ export const Product = () => {
         </div>
       </div>
 
-      <div className="right"></div>
+      <div className="right">
+        <h1>Title</h1>
+        <span className="price">₹ 499</span>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+          iusto ipsum blanditiis, eligendi a, mollitia ut iste fuga aperiam,
+          laborum expedita placeat natus? Ipsam consectetur architecto,
+          doloremque voluptatem adipisci unde?
+        </p>
+        <div className="quantity">
+          <button
+            onClick={() => setQuantity((prev) => (prev == 1 ? 1 : prev - 1))}
+          >
+            -
+          </button>
+          {quantity}
+          <button onClick={() => setQuantity((prev) => prev + 1)}>+</button>
+        </div>
+        <button className="add">
+          <AddShoppingCart /> ADD TO CART
+        </button>
+        <div className="links">
+          <div className="item">
+            <FavoriteBorder /> ADD TO WISHLIST
+          </div>
+          <div className="item">
+            <Balance /> ADD TO COMPARE
+          </div>
+        </div>
+
+        <div className="info">
+          <span>Vendor: Polo</span>
+          <span>Product Type: T-Shirt</span>
+          <span>Tag: T-Shirt, Men</span>
+        </div>
+        <hr />
+        <div className="details">
+          <span>Description</span>
+          <hr />
+          <span>Additional Information</span>
+          <hr />
+          <span>FAQ</span>
+        </div>
+      </div>
     </div>
   );
 };
